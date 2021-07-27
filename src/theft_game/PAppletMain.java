@@ -4,6 +4,7 @@ package theft_game;
 import processing.core.PApplet;
 import theft_game.entities.GameEntity;
 import theft_game.entities.*;
+import theft_game.scenes.TestScene;
 
 /**
  *
@@ -27,23 +28,20 @@ public class PAppletMain extends PApplet {
         size(viewport[0], viewport[1], RENDERER);
     }
     
-    GameEntity player;
+    TestScene game;
     
     @Override
     public void setup() {
         surface.setTitle(GAME_TITLE);
         
-        player = new Player(this, width/2, height/2);
+        game = new TestScene(this);
     }
     
     @Override
     public void draw(){
         surface.setTitle(GAME_TITLE + " | fps: " + (int) frameRate);
-        
-        background(255);
-        
-        player.render();
-        player.update();
+                
+        game.run();
     }
     
     @Override
