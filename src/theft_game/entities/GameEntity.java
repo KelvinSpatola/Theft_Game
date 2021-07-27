@@ -8,15 +8,16 @@ package theft_game.entities;
 import processing.core.*;
 
 public abstract class GameEntity {
-    private static PApplet papplet;
-    private PVector location;
+    protected PApplet p;
+    protected PVector pos;
 
     // CONSTRUCTOR
-    public GameEntity(float x, float y){
-        this.location = new PVector(x, y);
+    public GameEntity(PApplet p, float x, float y) {
+        this.p = p;
+        this.pos = new PVector(x, y);
     }
     
-    public abstract GameEntity render();
+    public abstract void render();
     
     public void update() { }
 

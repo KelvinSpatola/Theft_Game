@@ -1,7 +1,5 @@
 package theft_game;
 
-import processing.core.PApplet;
-
 /**
  *
  * @author Kelvin Spátola (Ov3rM1nD_)
@@ -10,6 +8,6 @@ import processing.core.PApplet;
 public class Theft_Game {
     
     public static void main(String[] args) {
-        PAppletWrapper.init();
+        PAppletMain.init();
     }
 }

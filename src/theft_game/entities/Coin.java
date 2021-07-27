@@ -6,6 +6,8 @@
 
 package theft_game.entities;
 
+import processing.core.PApplet;
+
 /**
  *
  * @author Kelvin Spátola (Ov3rM1nD_)
@@ -14,13 +16,13 @@ package theft_game.entities;
 public class Coin extends GameEntity {
 
     // CONSTRUCTOR
-    public Coin() {
-
+    public Coin(PApplet p, float x, float y){
+        super(p, x, y);
     }
 
     @Override
-    public GameEntity render() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void render() {
+        
     }
 
 }
